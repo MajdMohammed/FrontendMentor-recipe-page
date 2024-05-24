@@ -5,7 +5,6 @@
     --Mainfontsize: 19px;
     --MainfontColor: #4D4342;
     --HeadersColor: #773C2A;
-    --contentMargin: 20px;
 }
 
 /* initializing */
@@ -58,12 +57,12 @@ body {
 /* headers */
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 h1,
 h3 {
-    margin: var(--contentMargin);
+    margin: 20px 0;
     font-family: var(--HeadFontFam);
     font-weight: normal;
 }
@@ -78,6 +77,7 @@ h3 {
     font-family: var(--contentFontFam);
     font-weight: bold;
     font-size: 20px;
+    margin-left: 15px;
 }
 
 /* header div */
@@ -92,11 +92,7 @@ h3 {
 ul,
 ol,
 p {
-    margin: var(--contentMargin);
-}
-
-ul {
-    list-style: inside;
+    margin: 20px 0px 20px 0px;
 }
 
 ol {
@@ -104,8 +100,9 @@ ol {
 }
 
 main section:nth-of-type(1) li {
-    padding-left: -10px;
-    margin: 20px 7px;
+    list-style: disc;
+    padding-left: 20px;
+    margin: 20px 40px;
 }
 
 main section:nth-of-type(2) li {
@@ -136,12 +133,12 @@ main section:nth-of-type(3) li::marker {
 /* nutrition table */
 
 table {
+    width: calc(100% - 5%);
     text-transform: capitalize;
-    margin-left: 20px;
 }
 
 table tr td {
-    padding: 10px 270px 10px 40px;
+    padding: 4% 10% 4% 4%;
 }
 
 table tr td:nth-child(2) {
