@@ -1,7 +1,7 @@
 /* variables */
 :root {
-    --HeadFontFam: young-serif;
-    --contentFontFam: outfit;
+    --HeadFontFam: 'young-serif';
+    --contentFontFam: 'outfit';
     --Mainfontsize: 19px;
     --MainfontColor: #4D4342;
     --HeadersColor: #773C2A;
@@ -16,13 +16,18 @@
 
 /* external font-style */
 @font-face {
-    font-family: young-serif;
-    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format("ttf");
+    font-family: 'young-serif';
+    src: url(/docs/assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-    font-family: outfit;
-    src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("ttf");
+    font-family: 'outfit';
+    src: url(/docs/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Containers style */
@@ -62,12 +67,14 @@ h1 {
 }
 
 h1,
+h2,
 h3 {
     margin: 20px 0;
     font-family: var(--HeadFontFam);
     font-weight: normal;
 }
 
+h2,
 h3 {
     color: var(--HeadersColor);
     font-size: 30px;
