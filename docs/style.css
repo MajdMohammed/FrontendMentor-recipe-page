@@ -1,8 +1,72 @@
+/* ================= */
+/* Andy bell reset */
+/* ================= */
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===================================== */
+
 /* variables */
 :root {
     --HeadFontFam: 'young-serif';
     --contentFontFam: 'outfit';
-    --Mainfontsize: 19px;
+    --Mainfontsize: 1.20rem;
     --MainfontColor: #4D4342;
     --HeadersColor: #773C2A;
 }
@@ -62,29 +126,27 @@ body {
 /* headers */
 
 h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-transform: capitalize;
 }
 
 h1,
-h2,
-h3 {
+h2 {
     margin: 20px 0;
     font-family: var(--HeadFontFam);
     font-weight: normal;
 }
 
-h2,
-h3 {
+h2 {
     color: var(--HeadersColor);
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .prepa-header {
     color: #6D2F49;
     font-family: var(--contentFontFam);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-left: 15px;
 }
 
@@ -133,11 +195,6 @@ main section:nth-of-type(3) li::marker {
     font-weight: bold;
 }
 
-/* <span> style */
-.bold-word {
-    font-weight: bold;
-}
-
 /* nutrition table */
 
 table {
@@ -145,11 +202,17 @@ table {
     text-transform: capitalize;
 }
 
-table tr td {
-    padding: 4% 10% 4% 4%;
+table tr th {
+    padding: 2% 5% 2% 0%;
+    font-weight: normal;
+    text-align: start;
 }
 
-table tr td:nth-child(2) {
+table tr th:nth-of-type(1) {
+    padding-left: 5%;
+}
+
+table tr th:nth-child(2) {
     color: var(--HeadersColor);
     font-weight: bold;
 }
