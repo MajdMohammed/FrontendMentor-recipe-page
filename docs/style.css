@@ -204,7 +204,7 @@ table {
 
 }
 
-table tr th:nth-of-type(n+1):nth-of-type(-n+6) {
+table tr:nth-of-type(n+1):nth-of-type(-n+3) th {
     border-bottom: 1px solid black;
 }
 
