@@ -66,7 +66,7 @@ picture {
 :root {
     --HeadFontFam: 'young-serif';
     --contentFontFam: 'outfit';
-    --Mainfontsize: 1.20rem;
+    --Mainfontsize: clamp(1rem, 2.5vw, 1.5rem);
     --MainfontColor: #4D4342;
     --HeadersColor: #773C2A;
 }
@@ -96,7 +96,7 @@ picture {
 
 /* Containers style */
 body {
-    padding: 10% 20%;
+    padding: clamp(150px, 10vw, 200px) clamp(300px, 20vw, 400px);
     font-family: var(--contentFontFam);
     font-size: var(--Mainfontsize);
     color: var(--MainfontColor);
@@ -106,7 +106,8 @@ body {
 .main-container {
     background-color: white;
     border-radius: 20px;
-    padding: 5%;
+    padding: clamp(25px, 5vw, 35px);
+    width: fit-content;
 }
 
 /* div and image */
@@ -126,18 +127,19 @@ body {
 /* headers */
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     text-transform: capitalize;
+    margin: 40px 0;
 }
 
 h1,
 h2 {
-    margin: 20px 0;
     font-family: var(--HeadFontFam);
     font-weight: normal;
 }
 
 h2 {
+    margin: 20px 0;
     color: var(--HeadersColor);
     font-size: 1.875rem;
 }
@@ -204,21 +206,23 @@ table {
 
 }
 
-table tr:nth-of-type(n+1):nth-of-type(-n+3) th {
-    border-bottom: 1px solid black;
+table tr:nth-of-type(n+1):nth-of-type(-n+3) th,
+table tr:nth-of-type(n+1):nth-of-type(-n+3) td {
+    border-bottom: 1px solid rgb(79, 76, 76);
 }
 
-table tr th {
-    padding: 2% 5% 2% 0%;
+table tr th,
+table tr td {
+    padding: clamp(10px, 2vw, 20px) clamp(50px, 5vw, 70px) clamp(10px, 2vw, 20px) 0;
     font-weight: normal;
     text-align: start;
 }
 
 table tr th:nth-of-type(1) {
-    padding-left: 5%;
+    padding-left: clamp(20px, 2vw, 40px);
 }
 
-table tr th:nth-child(2) {
+table tr td:nth-child(2) {
     color: var(--HeadersColor);
     font-weight: bold;
 }
